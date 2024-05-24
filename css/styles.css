@@ -176,3 +176,101 @@ background-color: white;
 margin-bottom: 8px;
 }
     
+/*Contact section*/
+
+.contact h1 {
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    font-size: 3.2rem;
+    
+}
+.flex-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 10px 2em;
+}
+.flex-item-left
+{
+    padding: 10px;
+    flex: 50%;
+
+}
+.flex-item-left h4 {
+    font-weight: 700;
+}
+.flex-item-left p
+{
+    font-weight: 400;
+}
+.flex-item-right
+{
+    padding: 10px;
+    flex: 50%;
+}
+.flex-item-right form
+{
+    margin: 10px;
+}
+.flex-item-right form input [type="text"], select, textarea
+{
+font-weight: 400;
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+
+.flex-item-right button 
+{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 100%;
+
+}
+.flex-item-right button:hover,.flex-item-right button:focus
+{
+    background-color: black;
+    color: white;
+}
+@media (max-width: 800px)
+{
+    .flex-item-left, .flex-item-right
+    {
+        flex: 100%;
+    }
+}
+
+
+
+
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: blue;
+    margin-top: 20px;
+}
+
+footer h3 > span,
+footer h3 > a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 auto;
+}
