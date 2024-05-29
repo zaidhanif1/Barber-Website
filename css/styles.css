@@ -156,7 +156,7 @@ nav a:hover, nav a:focus {
 }
 .btn-hire:hover,.btn-hire:focus
 {
-    background-color: #163172;
+    background-color: rgb(12, 83, 150);
 
 }
 @media (max-width: 800px)
@@ -274,3 +274,5 @@ footer h3 > a {
     font-weight: 500;
     margin: 0 auto;
 }
+
+
