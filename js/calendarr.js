@@ -1,6 +1,7 @@
 const header = document.querySelector('.calendar header h3');
-const dates = document.querySelector('.dates'); // Corrected the selector
-const navs = document.querySelectorAll('#prev, #next'); // Corrected the selector
+const dates = document.querySelector('.dates');
+const navs = document.querySelectorAll('#prev, #next');
+
 const months = [
     "January",
     "February",
@@ -15,6 +16,7 @@ const months = [
     "November",
     "December",
 ];
+
 let date = new Date();
 let month = date.getMonth();
 let year = date.getFullYear();
@@ -34,8 +36,36 @@ function renderCalendar() {
         datesHtml += `<li>${i}</li>`;
     }
 
+    for (let i = end + 1; i < 7; i++) {
+        datesHtml += `<li class="inactive">${i - end}</li>`;
+    }
+
     dates.innerHTML = datesHtml;
-    header.textContent = `${months[month]} ${year}`; // Corrected template literal syntax
+    header.textContent = `${months[month]} ${year}`;
 }
 
-renderCalendar();
+function initNavigation() {
+    navs.forEach(nav => {
+        nav.addEventListener('click', (e) => {
+            if (e.target.id === 'prev') {
+                month--;
+                if (month < 0) {
+                    month = 11;
+                    year--;
+                }
+            } else if (e.target.id === 'next') {
+                month++;
+                if (month > 11) {
+                    month = 0;
+                    year++;
+                }
+            }
+            renderCalendar();
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCalendar();
+    initNavigation();
+});
