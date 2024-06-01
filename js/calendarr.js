@@ -44,26 +44,7 @@ function renderCalendar() {
     header.textContent = `${months[month]} ${year}`;
 }
 
-function initNavigation() {
-    navs.forEach(nav => {
-        nav.addEventListener('click', (e) => {
-            if (e.target.id === 'prev') {
-                month--;
-                if (month < 0) {
-                    month = 11;
-                    year--;
-                }
-            } else if (e.target.id === 'next') {
-                month++;
-                if (month > 11) {
-                    month = 0;
-                    year++;
-                }
-            }
-            renderCalendar();
-        });
-    });
-}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     renderCalendar();
