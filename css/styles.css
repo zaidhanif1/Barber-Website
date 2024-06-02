@@ -287,14 +287,27 @@ footer h3 > a {
     font-weight: 500;
     margin: 0 auto;
 }
+.name-text
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+}
+.subject
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    display: inline-flex;
 
+}
 .contact-btn
 {
     font-family: 'Montserrat', sans-serif;
+  
 }
 .contact-btn:hover
 {
-    background-color: rgb(35, 34, 34);
+    background-color: rgb(214, 203, 203);
 }
 
 /*Calendar begin*/
