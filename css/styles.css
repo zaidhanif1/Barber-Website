@@ -179,8 +179,29 @@ nav a:hover, nav a:focus {
         
     }
 }
+.btn-hire
+{
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;;
+}
+.btn-hire:hover,.btn-hire:focus
+{
+    background-color: rgb(12, 83, 150);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
 
-
+}
 @media (max-width: 800px)
 {
     .btn-hire
@@ -274,86 +295,87 @@ resize: vertical;
     }
 }
 
-
-.name-text
-{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    display: inline-block;
-}
-.subject
-{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    display: inline-flex;
-
-}
-.contact-btn
-{
-    font-family: 'Montserrat', sans-serif;
-  
-}
-.contact-btn:hover
-{
-    background-color: rgb(214, 203, 203);
-}
-
-/*Contact form begin*/
-
-form
-{
-    color: black;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-}
-#appointment-form h3 {
-    font-weight: bold;
-    font-size: xx-large;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.textbox-container
-{
+footer{
+    padding: 20px;
     text-align: center;
-    font-weight: 700;
-    font-family: 'Montserrat';
-    font-size: 3.2rem;
-    color: #000;
-}
-.textbox {
-    background-color: #f9f9f9; /* Light background color for better visibility */
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    padding: 10px 15px; /* Increase padding for a bigger box */
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
-    font-size: 16px; /* Adjust font size */
-    width: calc(100% - 32px); /* Ensure it fills the container width, accounting for padding */
-    margin-bottom: 10px; /* Space below the textbox */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
-    cursor: pointer;
+    background-color: blue;
+    margin-top: 20px;
 }
 
-.textbox:focus {
-    border-color: #007BFF; /* Change border color on focus */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on focus */
-    outline: none; /* Remove default outline */
+footer h3 > span,
+footer h3 > a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 auto;
 }
-.email
+
+
+
+
+/*Calendar begin*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body {
+
+    padding: 2rem;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+h1{
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+h3 {
+    font-weight: 600;
+}
+.calendar {
+    margin: auto;
+    background: white;
+    width: 388px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.calendar ul
 {
-    background-color: #f9f9f9; /* Light background color for better visibility */
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    padding: 10px 15px; /* Increase padding for a bigger box */
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
-    font-size: 16px; /* Adjust font size */
-    width: calc(100% - 32px); /* Ensure it fills the container width, accounting for padding */
-    margin-bottom: 10px; /* Space below the textbox */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */  
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+
+
+.calendar header
+{
+
+}
+.calendar ul li
+{
+    width: calc(100% /7 );
+    margin-top: 25px;
+    position: relative;
+    z-index: 2;
+
+
+}
+#prev, #next {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    border: none;
+    background: transparent;
     cursor: pointer;
 }
 .email:focus
