@@ -8,10 +8,9 @@ body {
     margin: 0;
 
     font-family: "Montserrat", sans-serif;
-    background: linear-gradient(to right top, #3E64FF, #ebd38c, #4CAF50);
+    background: linear-gradient(to right top, #3E64FF, #fb9595, #162dc2);
     height: 100vh;
     position: center;
-    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
@@ -21,7 +20,14 @@ body {
     flex-direction: column;
 }
 
-.btn-hire:hover
+h1 .button {
+    color: black;
+    padding: 2em 0;
+    text-decoration: none;
+    padding: 2em 0; 
+}
+
+.btn-hire:hover 
 {
     opacity: .5;
     transition: opacity 430ms;
@@ -33,17 +39,12 @@ body {
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
     color: black;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0;
+    font-weight: 100rem;
 }
 
-.subtitle {
-    font-weight: 700;
-    color: #000000;
-    font-size: 0.75rem;
-    margin: 0;
-    text-transform: capitalize;
-}
+
 
 .container {
     width: 90%;
@@ -84,6 +85,8 @@ nav ul {
     justify-content: center;
     list-style: none;
     padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
 }
 
 nav li {
@@ -99,7 +102,7 @@ nav a {
 }
 
 nav a:hover, nav a:focus {
-    color: black;
+    color: rgb(107, 74, 74);
 }
 
 .current-page {
@@ -107,9 +110,31 @@ nav a:hover, nav a:focus {
 }
 
 .current-page:hover {
-    color: black;
+    color: rgb(107, 74, 74);
+}
+.btn-hire:hover,.btn-hire:focus
+{
+    color: rgb(107, 74, 74);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
+.btn-hire
+{
+    background-color: white;
+    border: none;
+    color: rgb(46, 19, 19);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;;
+}
 @media (max-width: 675px) {
     nav ul {
         flex-direction: column;
@@ -124,21 +149,22 @@ nav a:hover, nav a:focus {
 
 
 
-.landing-text {
+ .welcome-text{
     display: table-cell;
     text-align: center;
     vertical-align: middle;
     color: black;
 }
 
-.landing-text h3 {
+.welcome-text h3 {
     font-weight: 700;
-    color: black;
+    font-size: 125%;
+    color: rgb(0, 0, 0);
     font-family: 'Montserrat', sans-serif;
 }
 
-.landing-text h1 {
-    font-size: 450%;
+.welcome-text h1 {
+    font-size: 400%;
     font-weight: 700;
     color: black;
     font-family: 'Montserrat', sans-serif;
@@ -153,29 +179,8 @@ nav a:hover, nav a:focus {
         
     }
 }
-.btn-hire
-{
-    background-color: white;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 800;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 3px;
-    font-family: 'Montserrat', sans-serif;;
-}
-.btn-hire:hover,.btn-hire:focus
-{
-    background-color: rgb(12, 83, 150);
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
 
-}
+
 @media (max-width: 800px)
 {
     .btn-hire
@@ -200,7 +205,7 @@ margin-bottom: 8px;
     font-weight: 700;
     font-family: 'Montserrat';
     font-size: 3.2rem;
-    
+    color: #000;
 }
 .flex-container
 {
@@ -246,9 +251,9 @@ resize: vertical;
 
 .flex-item-right button 
 {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -258,13 +263,9 @@ resize: vertical;
     cursor: pointer;
     border-radius: 3px;
     width: 100%;
+    font-family: 'Montserrat' san;
+}
 
-}
-.flex-item-right button:hover,.flex-item-right button:focus
-{
-    background-color: black;
-    color: white;
-}
 @media (max-width: 800px)
 {
     .flex-item-left, .flex-item-right
@@ -273,141 +274,207 @@ resize: vertical;
     }
 }
 
-footer{
-    padding: 20px;
-    text-align: center;
-    background-color: blue;
-    margin-top: 20px;
-}
 
-footer h3 > span,
-footer h3 > a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    margin: 0 auto;
-}
-
-
-
-
-/*Calendar begin*/
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-
-}
-body {
-
-    padding: 2rem;
-    height: 100vh;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-}
-h1{
-    text-align: center;
-    color: white;
-    margin-bottom: 2rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-}
-h3 {
-    font-weight: 600;
-}
-.calendar {
-    margin: auto;
-    background: white;
-    width: 388px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-
-}
-
-.calendar ul
+.name-text
 {
-    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+}
+.subject
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    display: inline-flex;
+
+}
+.contact-btn
+{
+    font-family: 'Montserrat', sans-serif;
+  
+}
+.contact-btn:hover
+{
+    background-color: rgb(214, 203, 203);
+}
+
+/*Contact form begin*/
+
+form
+{
+    color: black;
+    background-color: transparent;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+#appointment-form h3 {
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.textbox-container
+{
     text-align: center;
-
+    font-weight: 700;
+    font-family: 'Montserrat';
+    font-size: 3.2rem;
+    color: #000;
+}
+.textbox {
+    background-color: #f9f9f9; /* Light background color for better visibility */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    padding: 10px 15px; /* Increase padding for a bigger box */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    font-size: 16px; /* Adjust font size */
+    width: calc(100% - 32px); /* Ensure it fills the container width, accounting for padding */
+    margin-bottom: 10px; /* Space below the textbox */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
+    cursor: pointer;
 }
 
-
-.calendar header
+.textbox:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on focus */
+    outline: none; /* Remove default outline */
+}
+.email
 {
-
+    background-color: #f9f9f9; /* Light background color for better visibility */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    padding: 10px 15px; /* Increase padding for a bigger box */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    font-size: 16px; /* Adjust font size */
+    width: calc(100% - 32px); /* Ensure it fills the container width, accounting for padding */
+    margin-bottom: 10px; /* Space below the textbox */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */  
+    cursor: pointer;
 }
-.calendar ul li
+.email:focus
 {
-    width: calc(100% /7 );
-    margin-top: 25px;
-    position: relative;
-    z-index: 2;
+    border-color: #007BFF; /* Change border color on focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on focus */
+    outline: none; /* Remove default outline */
+}
 
+.phoneno
+{
+    background-color: #f9f9f9; /* Light background color for better visibility */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    padding: 10px 15px; /* Increase padding for a bigger box */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    font-size: 16px; /* Adjust font size */
+    width: calc(100% - 32px); /* Ensure it fills the container width, accounting for padding */
+    margin-bottom: 10px; /* Space below the textbox */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
+    cursor: pointer;
+}
+.phoneno:focus
+{
+    border-color: #007BFF; /* Change border color on focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on focus */
+    outline: none; /* Remove default outline */ 
+}
+.input-field
+{
+    cursor: pointer;
+    background-color: #f9f9f9; /* Light background color for better visibility */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    padding: 10px 15px; /* Increase padding for a bigger box */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    font-size: 16px; /* Adjust font size */
+    width: calc(100% - 32px); /* Ensure it fills the container width, accounting for padding */
+    margin-bottom: 10px; /* Space below the textbox */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
 
 }
-#prev, #next {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    border: none;
-    background: transparent;
+.input-field:focus
+{
+    border-color: #007BFF; /* Change border color on focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on focus */
+    outline: none; /* Remove default outline */ 
+}
+.date
+{
+    background-color: #f9f9f9; /* Light background color for better visibility */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    padding: 10px 15px; /* Increase padding for a bigger box */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    font-size: 16px; /* Adjust font size */
+    width: calc(100% - 32px); /* Ensure it fills the container width, accounting for padding */
+    margin-bottom: 10px; /* Space below the textbox */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
     cursor: pointer;
 
 }
+.date:focus
+{
+    border-color: #007BFF; /* Change border color on focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on focus */
+    outline: none; /* Remove default outline */ 
+}
+.confirm
+{
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+    
+}
 
-#prev::before, #next::before{
-    content: '';
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-style: solid;
-    border-width: 0.25em 0.25em 0 0;
-    border-color: #ccc;
+ 
 
 
-}
-#next::before 
-{
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-#prev::before
-{
-    transform: translate(-50%, -50%) rotate(-135deg);
 
-}
-#prev:hover::before,
-#next:hover::before
-{
-    border-color: #000;
-}
-.days
-{
-    font-weight: 600;
-}
-.dates li.today
-{
-    color: #fff;
 
-}
-.dates li.todau::before
-{
-    content: '';
-    width: 2rem;
-    height: 2rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: black;
-    border-radius: 50%;
-    z-index: -1;
-}
-.days li.inactive
-{
-  color: #b32424;  
-}
+
+
+
+
+
+
+
+
+

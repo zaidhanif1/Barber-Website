@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar</title>
+  <link rel="stylesheet" href="..\css\styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container container-nav">
+      <div class="site-title">
+        <h1><a href="index.html" class="button">zcutz</a></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="current-page">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="calendar.html">Book an appointment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <form id="appointment-form">
+      <h3>Book an appointment</h3>
+      <input type="text" id="name" placeholder="Name" class="textbox" />
+      <input type="email" id="email" placeholder="Email" class="email"/>
+      <input type="text" id="phone" placeholder="Phone Number" class="phoneno" />
+      <select name="category" id="category" class="input-field">
+        <option value="Choose your service">Choose your service</option>
+        <option value="Haircut">Haircut $25</option>
+      </select>
+      <input type="date" id="date" name="date" class="date" />
+      <select id="time" name="time" class="input-field">
+        <option value="">Choose a time</option>
+      </select>
+      <button type="submit" class="confirm" onclick="sendMail()">Confirm appointment</button>
+      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+    </form>
+  </div>
+
+<script>
+
+
+
+
+function sendMail() 
+{
+    var params = 
+    {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        service: document.getElementById("category").value,
+        date: document.getElementById("date").value,
+        time: document.getElementById("time").value
+    }
+
+    const serviceID = "service_2ckei6k";
+    const templateID = "template_6j6c08k";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(
+        res => 
+        {
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("service").value = "";
+            document.getElementById("date").value = "";
+            document.getElementById("time").value = "";
+            console.log(res);
+            alert("Your appointment request was successfully sent!");
+        }
+    )
+    .catch(err=>console.log(err));
+}
+
+    
+</script>
+
+
+
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+  publicKey: "tDhHIC_nIJktkKSyH",
+});
+})();
+</script>
+
+
+
+</body>
+</html>
