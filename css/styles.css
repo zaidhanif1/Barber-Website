@@ -8,7 +8,7 @@ body {
     margin: 0;
 
     font-family: "Montserrat", sans-serif;
-    background: linear-gradient(to right top, #3E64FF, #fb9595, #162dc2);
+    background-color: skyblue;
     height: 100vh;
     position: center;
     width: 100%;
@@ -26,12 +26,16 @@ h1 .button {
     text-decoration: none;
     padding: 2em 0; 
 }
+h1 .button:hover
+{
+    color: rgb(107, 74, 74);
+}
 
-.btn-hire:hover 
+.buttonAppoint:hover 
 {
     opacity: .5;
     transition: opacity 430ms;
-    background-color: black;
+    background-color: rgb(187, 167, 167);
 }
 
 
@@ -112,7 +116,7 @@ nav a:hover, nav a:focus {
 .current-page:hover {
     color: rgb(107, 74, 74);
 }
-.btn-hire:hover,.btn-hire:focus
+.buttonAppoint:hover,.buttonAppoint:focus
 {
     color: rgb(107, 74, 74);
     cursor: pointer;
@@ -120,11 +124,11 @@ nav a:hover, nav a:focus {
 
 }
 
-.btn-hire
+.buttonAppoint
 {
     background-color: white;
     border: none;
-    color: rgb(46, 19, 19);
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -183,7 +187,7 @@ nav a:hover, nav a:focus {
 
 @media (max-width: 800px)
 {
-    .btn-hire
+    .buttonAppoint
     {
         padding: 8px 16px;
 

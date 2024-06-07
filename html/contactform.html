@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calendar</title>
+  <title>Book an appointment</title>
   <link rel="stylesheet" href="..\css\styles.css" />
 </head>
 <body>
@@ -36,11 +36,12 @@
       <!--service input ^-->
         <option value="Haircut">Haircut $25</option>
       </select>
-      <input type="date" id="date" name="date" class="date" placeholder="Choose a date" />
+      <input type="date" id="date" name="date" class="date" placeholder="Choose a date" onchange="updateTimeSlots()" />
       <!--date input ^ -->
-      <input type="time" id="time" name="time" class="time" placeholder="Choose a time" min="09:00" max="17:00" step="1800"/>
-      <!--time input with restricted availability ^-->
-      <button type="button" class="confirm" onclick="sendMail(), SendMail()">Confirm appointment</button>
+      <select id="time" name="time" class="time">
+        <!--time input with restricted availability, dynamically populated -->
+      </select>
+      <button type="button" class="confirm" onclick="sendMail()">Confirm appointment</button>
       <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
     </form>
   </div>
@@ -50,6 +51,45 @@
 (function(){
   emailjs.init("tDhHIC_nIJktkKSyH");
 })();
+
+// Define your business hours
+const businessHours = { start: 9, end: 17 };
+
+// Function to update time slots based on selected date
+function updateTimeSlots() {
+  const selectedDate = new Date(document.getElementById("date").value);
+  const currentTime = new Date();
+  const timeSelect = document.getElementById("time");
+  timeSelect.innerHTML = ""; // Clear existing options
+
+  // Check if selected date is today
+  if (selectedDate.toDateString() === currentTime.toDateString()) {
+    const currentHour = currentTime.getHours();
+    // Populate time slots starting from next available hour
+    for (let i = Math.ceil(currentHour / 0.5) * 0.5; i <= businessHours.end; i += 0.5) {
+      const option = document.createElement("option");
+      const hour = (i % 12) || 12; // Convert to regular time
+      const minutes = (i % 1) ? "30" : "00";
+      const period = i < 12 ? 'AM' : 'PM';
+      option.text = `${hour}:${minutes} ${period}`;
+      option.value = `${hour}:${minutes} ${period}`;
+      timeSelect.add(option);
+    }
+  } else {
+    for (let i = businessHours.start; i <= businessHours.end; i++) {
+      for (let j = 0; j < 2; j++) {
+        const option = document.createElement("option");
+        const hour = (i % 12) || 12; // Convert to regular time
+        const minutes = (j === 0) ? "00" : "30";
+        const period = i < 12 ? 'AM' : 'PM';
+        option.text = `${hour}:${minutes} ${period}`;
+        option.value = `${hour}:${minutes} ${period}`;
+        timeSelect.add(option);
+      }
+    }
+  }
+}
+
 
 function sendMail() {
     var params = {
@@ -61,28 +101,8 @@ function sendMail() {
         time: document.getElementById("time").value
     };
 
-    const serviceID1 = "service_2ckei6k";
-    const templateID1 = "template_6j6c08k";
-
-    emailjs.send(serviceID, templateID1, params1)
-    .then(function(res) {
-        alert("Success! " + res.status);
-    })
-    .catch(function(err) {
-        console.error("Failed to send email:", err);
-        alert("Failed to send email: " + JSON.stringify(err));
-    });
-}
-
-function SendMail() {
-    var params = {
-        email2: email,
-        Email1: "zc.utzzzz1@gmail.com", 
-        Phone1: "(304) 449-7012",
-    };
-
     const serviceID = "service_2ckei6k";
-    const templateID = "template_z2f0uto";
+    const templateID = "template_6j6c08k";
 
     emailjs.send(serviceID, templateID, params)
     .then(function(res) {
@@ -92,12 +112,28 @@ function SendMail() {
         console.error("Failed to send email:", err);
         alert("Failed to send email: " + JSON.stringify(err));
     });
+
+    var paramsForUser = {
+        userName: params.name,
+        userEmail: params.email,
+        myEmail: "zc.utzzzz1@gmail.com", 
+        businessPhone: "(304) 449-7012",
+    };
+
+    const userTemplateID = "template_z2f0uto";
+
+    emailjs.send(serviceID, userTemplateID, paramsForUser)
+    .then(function(res) {
+        alert("Success! " + res.status);
+    })
+    .catch(function(err) {
+        console.error("Failed to send email:", err);
+        alert("Failed to send email: " + JSON.stringify(err));
+    });
 }
 
-
-
-
-
+// Initial call to populate time slots
+updateTimeSlots();
 </script>
 </body>
 </html>

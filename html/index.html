@@ -7,12 +7,50 @@
     <link rel="stylesheet" href="..\css\styles.css">
     <style>
         body
-    {
-        background-image: asd;
-        background-image: no-repeat;
-        background-size: cover;
+    
+        body {
+    background-color: skyblue;
+}
 
+.barber-pole {
+    box-sizing: border-box;
+    margin: 80px auto;
+    padding-top: 50px;
+    height: 300px;
+    width: 85px;
+    background-color: darkgrey;
+    border-top: 2px solid snow;
+    border-right: 5px solid grey;
+    border-radius: 100px;
+}
+
+.anim-element {
+    position: relative;
+    box-sizing: content-box;
+    height: 200px;
+    width: 75px;
+    background-color: snow;
+    background-image: linear-gradient(-53deg, dodgerblue 16.667%, snow 16.667%, snow 33.333%, crimson 33.333%, crimson 50%, snow 50%, snow 66.667%, dodgerblue 66.667%, dodgerblue 83.333%, snow 83.333%);
+    background-repeat: repeat-y;
+    background-size: cover;
+    animation: spin 3s linear infinite;
+    border-right: 5px solid lighten(skyblue, 20%);
+    border-left: 5px solid lighten(skyblue, 20%);
+    border-top: 5px solid grey;
+    border-bottom: 5px solid grey;
+}
+
+@keyframes spin {
+    0% {
+        background-position-y: 0px;
     }
+  
+    100% {
+        background-position-y: 200px;
+    }
+}
+
+    
     </style>
 </head>
 <body>
@@ -38,7 +76,7 @@
                 <h3>Welcome to</h3>
                 <h1>zcutz</h1>
                 <hr class ="hr-main">
-                <a href="contactform.html" class = "button btn-hire"> Book an appointment</a>
+                <a href="contactform.html" class = "buttonAppoint"> Book an appointment</a>
 
             </div>
     </div>
