@@ -38,9 +38,9 @@
       </select>
       <input type="date" id="date" name="date" class="date" placeholder="Choose a date" />
       <!--date input ^ -->
-      <input type="time" id="time" name="time" class="time" placeholder="Choose a time" />
-      <!--time input ^-->
-      <button type="button" class="confirm" onclick="sendMail()">Confirm appointment</button>
+      <input type="time" id="time" name="time" class="time" placeholder="Choose a time" min="09:00" max="17:00" step="1800"/>
+      <!--time input with restricted availability ^-->
+      <button type="button" class="confirm" onclick="sendMail(), SendMail()">Confirm appointment</button>
       <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
     </form>
   </div>
@@ -54,15 +54,35 @@
 function sendMail() {
     var params = {
         name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
+        email: document.getElementById("email").value, 
         phone: document.getElementById("phone").value,
         category: document.getElementById("category").value,
         date: document.getElementById("date").value,
         time: document.getElementById("time").value
     };
 
+    const serviceID1 = "service_2ckei6k";
+    const templateID1 = "template_6j6c08k";
+
+    emailjs.send(serviceID, templateID1, params1)
+    .then(function(res) {
+        alert("Success! " + res.status);
+    })
+    .catch(function(err) {
+        console.error("Failed to send email:", err);
+        alert("Failed to send email: " + JSON.stringify(err));
+    });
+}
+
+function SendMail() {
+    var params = {
+        email2: email,
+        Email1: "zc.utzzzz1@gmail.com", 
+        Phone1: "(304) 449-7012",
+    };
+
     const serviceID = "service_2ckei6k";
-    const templateID = "template_6j6c08k";
+    const templateID = "template_z2f0uto";
 
     emailjs.send(serviceID, templateID, params)
     .then(function(res) {
@@ -73,6 +93,11 @@ function sendMail() {
         alert("Failed to send email: " + JSON.stringify(err));
     });
 }
+
+
+
+
+
 </script>
 </body>
 </html>
