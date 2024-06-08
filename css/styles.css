@@ -20,6 +20,7 @@ body {
     flex-direction: column;
 }
 
+
 h1 .button {
     color: black;
     padding: 2em 0;
@@ -74,7 +75,15 @@ header {
     
 }
 
-@media (max-width: 675px) {
+.footDiv
+{
+   display: flex;
+   flex-direction: column;
+   padding: 0;
+}
+
+
+@media (max-width: 600px) {
     .container-nav {
         flex-direction: column;
     }
@@ -202,105 +211,7 @@ background-color: white;
 margin-bottom: 8px;
 }
     
-/*Contact section*/
 
-.contact h1 {
-    text-align: center;
-    font-weight: 700;
-    font-family: 'Montserrat';
-    font-size: 3.2rem;
-    color: #000;
-}
-.flex-container
-{
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    margin: 10px 2em;
-}
-.flex-item-left
-{
-    padding: 10px;
-    flex: 50%;
-
-}
-.flex-item-left h4 {
-    font-weight: 700;
-}
-.flex-item-left p
-{
-    font-weight: 400;
-}
-.flex-item-right
-{
-    padding: 10px;
-    flex: 50%;
-}
-.flex-item-right form
-{
-    margin: 10px;
-}
-.flex-item-right form input [type="text"], select, textarea
-{
-font-weight: 400;
-width: 100%;
-padding: 12px;
-border: 1px solid #ccc;
-border-radius: 4px;
-box-sizing: border-box;
-margin-top: 6px;
-margin-bottom: 16px;
-resize: vertical;
-}
-
-.flex-item-right button 
-{
-    background-color: rgb(255, 255, 255);
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 3px;
-    width: 100%;
-    font-family: 'Montserrat' san;
-}
-
-@media (max-width: 800px)
-{
-    .flex-item-left, .flex-item-right
-    {
-        flex: 100%;
-    }
-}
-
-
-.name-text
-{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    display: inline-block;
-}
-.subject
-{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    display: inline-flex;
-
-}
-.contact-btn
-{
-    font-family: 'Montserrat', sans-serif;
-  
-}
-.contact-btn:hover
-{
-    background-color: rgb(214, 203, 203);
-}
 
 /*Contact form begin*/
 
@@ -382,51 +293,76 @@ form
 
 .confirm
 {
+    position: center;
     align-items: center;
-    appearance: none;
     background-color: #fff;
     border-radius: 24px;
     border-style: none;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-    box-sizing: border-box;
     color: #3c4043;
     cursor: pointer;
     display: inline-flex;
-    fill: currentcolor;
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
     font-weight: 500;
     height: 48px;
     justify-content: center;
-    letter-spacing: .25px;
-    line-height: normal;
-    max-width: 100%;
-    overflow: visible;
-    padding: 2px 24px;
-    position: relative;
     text-align: center;
-    text-transform: none;
-    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: auto;
-    will-change: transform,opacity;
-    z-index: 0;
-    
+    width: 300px;  
 }
 
  
+/* footer design*/
 
+footer {
+    flex-shrink: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; /* These bottom 4 elements, including position, ensure bottom position */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+}
 
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
 
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 1000%;
+    transition: background-color 0.5s; /* Apply transition to the background color */
+}
 
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+    transition: color 0.2s; /* Apply transition to the color */
+}
 
+.socialIcons a:hover {
+    background-color: #333;
+}
 
+.socialIcons a:hover i {
+    color: white; /* Change the property to color instead of background-color */
+}
 
-
-
-
-
-
-
+@media(max-width: 700px) {
+    .footer ul {
+        flex-direction: column;
+    }
+    .footer ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
