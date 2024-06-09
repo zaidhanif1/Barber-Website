@@ -375,10 +375,6 @@ footer {
 }
 .confirm {
     font-size: 10px;
-    position: fixed; /* Change position to fixed */
-    top: 80%; /* Place it at 50% from the top */
-    left: 50%; /* Place it at 50% from the left */
-    transform: translate(-50%, -50%); /* Center it horizontally and vertically */
     align-items: center;
     background-color: #fff;
     border-radius: 24px;
@@ -391,7 +387,7 @@ footer {
     font-weight: 500;
     justify-content: center;
     text-align: center;
-    width: 100px;  
+    width: 100px;
 }
 #appointment-form h3
 {
