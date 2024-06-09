@@ -83,15 +83,6 @@ header {
 }
 
 
-@media (max-width: 600px) {
-    .container-nav {
-        flex-direction: column;
-    }
-
-    header {
-        text-align: center;
-    }
-}
 
 nav ul {
     display: flex;
@@ -148,15 +139,6 @@ nav a:hover, nav a:focus {
     border-radius: 3px;
     font-family: 'Montserrat', sans-serif;;
 }
-@media (max-width: 675px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav li {
-        margin: 0.5em 0;
-    }
-}
 
 
 
@@ -184,24 +166,10 @@ nav a:hover, nav a:focus {
     padding-bottom: 0;
     margin: 0;
 }
-@media (max-width : 600px)
-{
-    .landing-text h1 
-    {
-        font-size: 260%
-        
-    }
-}
 
 
-@media (max-width: 800px)
-{
-    .buttonAppoint
-    {
-        padding: 8px 16px;
 
-    }
-}
+
 #hr-main
 {
 width: 100px;
@@ -293,6 +261,11 @@ form
 
 .confirm
 {
+    position: fixed; /* Change position to fixed */
+    top: 75%; /* Place it at 50% from the top */
+    left: 50%; /* Place it at 50% from the left */
+    transform: translate(-50%, -50%); /* Center it horizontally and vertically */
+
     position: center;
     align-items: center;
     background-color: #fff;
@@ -303,12 +276,12 @@ form
     cursor: pointer;
     display: inline-flex;
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
     height: 48px;
     justify-content: center;
     text-align: center;
-    width: 300px;  
+    width: 150;  
 }
 
  
@@ -356,13 +329,73 @@ footer {
     color: white; /* Change the property to color instead of background-color */
 }
 
-@media(max-width: 700px) {
-    .footer ul {
+/*end foot design*/
+
+@media (max-width: 600px) {
+    .container-nav {
         flex-direction: column;
     }
-    .footer ul li {
+
+    header {
+
+        background-color: white;
+        padding: 1em 0; /* Smaller padding */
+        box-shadow: 0 4px 8px 0 rgba(22, 22, 22, .19);
         width: 100%;
+        position: fixed;
+        height: fit-content;
+        left: 0;
+        top: 0;
+        font-size: 8px;
         text-align: center;
-        margin: 10px;
+        align-items: right;
     }
+    header .button
+    {
+        font-size: 21px;
+    }
+
+    .welcome-text h1 {
+        font-size: 200%; /* Smaller font size */
+    }
+
+    .buttonAppoint {
+        padding: 10px 20px; /* Smaller button size */
+        font-size: 14px; /* Smaller font size */
+    }
+
+
+    footer {
+        padding: 5px ; /* Smaller padding */
+        font-size: 8px;
+    }
+.textbox, .date, .time, .email, .phoneno, .input-field
+{
+    font-size: 10px;
+}
+.confirm {
+    font-size: 10px;
+    position: fixed; /* Change position to fixed */
+    top: 80%; /* Place it at 50% from the top */
+    left: 50%; /* Place it at 50% from the left */
+    transform: translate(-50%, -50%); /* Center it horizontally and vertically */
+    align-items: center;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    justify-content: center;
+    text-align: center;
+    width: 100px;  
+}
+#appointment-form h3
+{
+    font-size: 20px;
+}
+
 }
