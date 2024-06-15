@@ -59,13 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const templateID = "template_6j6c08k";
   
       emailjs.send(serviceID, templateID, params)
-        .then(function(res) {
-          alert("Success! " + res.status);
-        })
-        .catch(function(err) {
-          console.error("Failed to send email:", err);
-          alert("Failed to send email: " + JSON.stringify(err));
-        });
+       
   
       const paramsForUser = {
         userName: params.name,
@@ -77,15 +71,18 @@ document.addEventListener("DOMContentLoaded", function() {
       const userTemplateID = "template_z2f0uto";
   
       emailjs.send(serviceID, userTemplateID, paramsForUser)
-        .then(function(res) {
-          alert("Success! " + res.status);
-        })
-        .catch(function(err) {
-          console.error("Failed to send email:", err);
-          alert("Failed to send email: " + JSON.stringify(err));
-        });
+       
     }
   });
   
 
-  
+let popup = document.getElementById("popup")
+
+function openPopup()
+{
+  popup.classList.add('open-popup')
+}
+function closePopup()
+  {
+    popup.classList.remove('open-popup')
+  }

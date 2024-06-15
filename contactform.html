@@ -7,7 +7,8 @@
   <title>Book an appointment</title>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="icon" href="https://st4.depositphotos.com/25790974/30796/v/450/depositphotos_307969250-stock-illustration-barber-pole-logo.jpg
+  " type="jpg" class="websiteLogo">
 </head>
 <body>
   <header class="header">
@@ -18,7 +19,7 @@
       <nav>
         <ul>
           <li><a href="index.html" class="current-page">Home</a></li>
-          <li><a href="contactform.html" class="bookappoin">Book an appointment</a></li>
+          <li><a href="contactform.html" class>Book an appointment</a></li>
         </ul>
       </nav>
     </div>
@@ -36,7 +37,19 @@
       </select>
       <input type="date" id="date" name="date" class="date" placeholder="Choose a date"  onchange="updateTimeSlots()" required />
       <select id="time" name="time" class="time" required></select>
-      <button type="button" class="confirm" onclick="sendMail()">Confirm appointment</button>
+      <button type="button" class="confirm" onclick=" openPopup()">Confirm appointment</button>
+
+
+      <div class="popup" id="popup">
+
+        <h2>Thank you!
+        </h2>
+        <p>Your appointment is booked!.</p>
+        <button class="thanksBtn" onclick="closePopup()">OK</button>
+    </div>
+
+
+
     </form>
   </div>
 

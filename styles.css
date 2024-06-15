@@ -6,7 +6,6 @@
 
 body {
     margin: 0;
-
     font-family: "Montserrat", sans-serif;
     background-color: skyblue;
     height: 100vh;
@@ -20,25 +19,16 @@ body {
     flex-direction: column;
 }
 
-
 h1 .button {
     color: black;
     padding: 2em 0;
     text-decoration: none;
-    padding: 2em 0; 
+    padding: 2em 0;
 }
-h1 .button:hover
-{
+
+h1 .button:hover {
     color: rgb(107, 74, 74);
 }
-
-.buttonAppoint:hover 
-{
-    opacity: .5;
-    transition: opacity 430ms;
-    background-color: rgb(187, 167, 167);
-}
-
 
 .site-title h1 {
     font-weight: 400;
@@ -48,8 +38,6 @@ h1 .button:hover
     margin: 0;
     font-weight: 100rem;
 }
-
-
 
 .container {
     width: 90%;
@@ -72,17 +60,13 @@ header {
     z-index: 1000;
     left: 0;
     top: 0;
-    
 }
 
-.footDiv
-{
-   display: flex;
-   flex-direction: column;
-   padding: 0;
+.footDiv {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
-
-
 
 nav ul {
     display: flex;
@@ -116,16 +100,8 @@ nav a:hover, nav a:focus {
 .current-page:hover {
     color: rgb(107, 74, 74);
 }
-.buttonAppoint:hover,.buttonAppoint:focus
-{
-    color: rgb(107, 74, 74);
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
 
-}
-
-.buttonAppoint
-{
+.buttonAppoint {
     background-color: white;
     border: none;
     color: black;
@@ -137,14 +113,22 @@ nav a:hover, nav a:focus {
     font-weight: 800;
     cursor: pointer;
     border-radius: 3px;
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
+.buttonAppoint:hover {
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transform: scale(1.05);
+}
 
+.buttonAppoint:active {
+    scale: (1.0);
+    background-color: rgb(200, 224, 233);
+}
 
-
-
- .welcome-text{
+.welcome-text {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -167,111 +151,65 @@ nav a:hover, nav a:focus {
     margin: 0;
 }
 
-
-
-
-#hr-main
-{
-width: 100px;
-height: 5px;
-border-radius: 1rem;
-background-color: white;
-margin-bottom: 8px;
+#hr-main {
+    width: 100px;
+    height: 5px;
+    border-radius: 1rem;
+    background-color: white;
+    margin-bottom: 8px;
 }
-    
-
 
 /*Contact form begin*/
 
-form
-{
+form {
     color: black;
     background-color: transparent;
     display: flex;
     flex-direction: column;
 }
+
 #appointment-form h3 {
     font-weight: bold;
     font-size: xx-large;
     font-family: 'Montserrat', sans-serif;
 }
 
-.textbox-container
-{
+.textbox-container {
     text-align: center;
     font-weight: 700;
     font-family: 'Montserrat';
     font-size: 3.2rem;
     color: #000;
 }
-.textbox , .email, .date, .time, .phoneno, .input-field
-{
-    background-color: #f9f9f9; /* Light background color for better visibility */
+
+.textbox, .email, .date, .time, .phoneno, .input-field {
+    background-color: #f9f9f9;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    padding: 10px 15px; /* Increase padding for a bigger box */
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
-    font-size: 16px; /* Adjust font size */
-    width: calc(100% - 32px); /* Ensure it fills the container width, accounting for padding */
-    margin-bottom: 10px; /* Space below the textbox */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    width: calc(100% - 32px);
+    margin-bottom: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
-.textbox:focus {
-    border-color: #007BFF; /* Change border color on focus */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on focus */
-    outline: none; /* Remove default outline */
+.textbox:focus, .email:focus, .phoneno:focus, .input-field:focus, .date:focus {
+    border-color: #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
 }
 
-.email:focus
-{
-    border-color: #007BFF; /* Change border color on focus */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on focus */
-    outline: none; /* Remove default outline */
-}
-
-
-.phoneno:focus
-{
-    border-color: #007BFF; /* Change border color on focus */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on focus */
-    outline: none; /* Remove default outline */ 
-}
-
-.input-field:focus
-{
-    border-color: #007BFF; /* Change border color on focus */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on focus */
-    outline: none; /* Remove default outline */ 
-}
-
-.date:focus
-{
-    border-color: #007BFF; /* Change border color on focus */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on focus */
-    outline: none; /* Remove default outline */ 
-}
-
-
-
-
-
-.confirm
-{
-    position: fixed; /* Change position to fixed */
-    top: 75%; /* Place it at 50% from the top */
-    left: 50%; /* Place it at 50% from the left */
-    transform: translate(-50%, -50%); /* Center it horizontally and vertically */
-
+.confirm {
     position: center;
     align-items: center;
     background-color: #fff;
     border-radius: 24px;
     border-style: none;
-    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
     color: #3c4043;
     cursor: pointer;
     display: inline-flex;
@@ -281,11 +219,67 @@ form
     height: 48px;
     justify-content: center;
     text-align: center;
-    width: 150;  
+    width: 150px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
- 
-/* footer design*/
+.confirm:hover {
+    transform: scale(1.05);
+    background-color: rgb(240, 239, 239);
+}
+
+/* begin popUp design */
+
+.popup {
+    width: 400px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+    padding: 0 30px 60px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.3s, visibility 0.3s;
+}
+
+.popup h2 {
+    font-size: 38px;
+    margin: 30px 0 10px;
+    font-weight: 500;
+}
+
+.thanksBtn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: rgb(135, 206, 235);
+    box-shadow: 0 2px 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.thanksBtn:hover {
+    background-color: rgb(101, 188, 223);
+    transform: scale(1.05);
+}
+
+.thanksBtn:active {
+    background-color: rgb(38, 175, 230);
+}
+
+.open-popup {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* end popUp design */
+
+/* footer design */
 
 footer {
     flex-shrink: 0;
@@ -293,11 +287,10 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed; /* These bottom 4 elements, including position, ensure bottom position */
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    
 }
 
 .socialIcons {
@@ -311,14 +304,14 @@ footer {
     background-color: white;
     margin: 10px;
     border-radius: 1000%;
-    transition: background-color 0.5s; /* Apply transition to the background color */
+    transition: background-color 0.5s;
 }
 
 .socialIcons a i {
     font-size: 2em;
     color: black;
     opacity: 0.9;
-    transition: color 0.2s; /* Apply transition to the color */
+    transition: color 0.2s;
 }
 
 .socialIcons a:hover {
@@ -326,10 +319,10 @@ footer {
 }
 
 .socialIcons a:hover i {
-    color: white; /* Change the property to color instead of background-color */
+    color: white;
 }
 
-/*end foot design*/
+/* end foot design */
 
 @media (max-width: 600px) {
     .container-nav {
@@ -337,9 +330,8 @@ footer {
     }
 
     header {
-
         background-color: white;
-        padding: 1em 0; /* Smaller padding */
+        padding: 1em 0;
         box-shadow: 0 4px 8px 0 rgba(22, 22, 22, .19);
         width: 100%;
         position: fixed;
@@ -348,50 +340,74 @@ footer {
         top: 0;
         font-size: 8px;
         text-align: center;
-        align-items: right;
     }
-    header .button
-    {
+
+    header .button {
         font-size: 21px;
     }
 
     .welcome-text h1 {
-        font-size: 200%; /* Smaller font size */
+        font-size: 200%;
     }
 
     .buttonAppoint {
-        padding: 10px 20px; /* Smaller button size */
-        font-size: 14px; /* Smaller font size */
+        padding: 10px 20px;
+        font-size: 14px;
     }
-
 
     footer {
-        padding: 5px ; /* Smaller padding */
+        padding: 5px;
         font-size: 8px;
     }
-.textbox, .date, .time, .email, .phoneno, .input-field
-{
-    font-size: 10px;
-}
-.confirm {
-    font-size: 10px;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 24px;
-    border-style: none;
-    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-    color: #3c4043;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    justify-content: center;
-    text-align: center;
-    width: 100px;
-}
-#appointment-form h3
-{
-    font-size: 20px;
+
+    .textbox, .date, .time, .email, .phoneno, .input-field {
+        font-size: 10px;
+    }
+
+    .confirm {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        font-size: 10px;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 24px;
+        border-style: none;
+        box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+        color: #3c4043;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        justify-content: center;
+        text-align: center;
+        width: 100px;
+    }
+
+    #appointment-form h3 {
+        font-size: 20px;
+    }
+
+    .popup {
+        width: 90%;
+        padding: 20px 10px 40px;
+    }
+
+    .popup h2 {
+        font-size: 28px;
+        margin: 20px 0 5px;
+    }
+
+    .thanksBtn {
+        font-size: 14px;
+        padding: 8px 0;
+    }
 }
 
+::-webkit-scrollbar {
+    display: block;
+}
+
+.websiteLogo {
+    border-radius: 10px;
 }
