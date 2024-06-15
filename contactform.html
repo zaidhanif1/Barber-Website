@@ -37,14 +37,14 @@
       </select>
       <input type="date" id="date" name="date" class="date" placeholder="Choose a date"  onchange="updateTimeSlots()" required />
       <select id="time" name="time" class="time" required></select>
-      <button type="button" class="confirm" onclick=" openPopup()">Confirm appointment</button>
+      <button type="button" class="confirm" onclick="sendMail(), openPopup()">Confirm appointment</button>
 
 
       <div class="popup" id="popup">
 
         <h2>Thank you!
         </h2>
-        <p>Your appointment is booked.</p>
+        <p>Your appointment is booked!</p>
         <button class="thanksBtn" onclick="closePopup()">OK</button>
     </div>
 

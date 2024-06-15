@@ -367,7 +367,7 @@ footer
 
 /*end foot design*/
 
-@media (max-width: 600px), (max-height: 832px) {
+@media (max-width: 600px) {
     .container-nav {
         flex-direction: column;
     }
@@ -398,6 +398,7 @@ footer
     .buttonAppoint {
         padding: 10px 20px; /* Smaller button size */
         font-size: 14px; /* Smaller font size */
+        border-radius: 15px;
     }
 
 
@@ -407,7 +408,8 @@ footer
     }
 .textbox, .date, .time, .email, .phoneno, .input-field
 {
-    font-size: 10px;
+    font-size: 12px;
+    border-radius: 20px;
 }
 .confirm {
     align-self: center;
@@ -441,4 +443,58 @@ footer
 {
     border-radius: 10px;
 }
+.popup 
+{
+    width: 350px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+    padding: 0 30px 60px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.3s, visibility 0.3s;
+
+  }
+  
+  .popup h2 
+  {
+    font-size: 38px;
+    margin: 30px 0 10px;
+    font-weight: 500;
+  }
+  
+  .thanksBtn 
+  {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: rgb(135, 206, 235);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: small;
+  }
+  .thanksBtn:hover
+  { 
+        background-color: rgb(101, 188, 223); /* Change background color to an even darker red on active */
+        transform: scale(1.05); /* Reset size on active */
+  }
+  .thanksBtn:active
+  {
+    background-color:rgb(38, 175, 230) ;
+  }
+
+  .open-popup 
+  {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
 
