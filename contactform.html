@@ -7,8 +7,7 @@
   <title>Book an appointment</title>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" href="https://st4.depositphotos.com/25790974/30796/v/450/depositphotos_307969250-stock-illustration-barber-pole-logo.jpg
-  " type="jpg" class="websiteLogo">
+  <link rel="icon" href="https://st4.depositphotos.com/25790974/30796/v/450/depositphotos_307969250-stock-illustration-barber-pole-logo.jpg" type="jpg" class="websiteLogo">
 </head>
 <body>
   <header class="header">
@@ -19,46 +18,65 @@
       <nav>
         <ul>
           <li><a href="index.html" class="current-page">Home</a></li>
-          <li><a href="contactform.html" class>Book an appointment</a></li>
+          <li><a href="contactform.html">Book an appointment</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <div class="container">
-    <form id="appointment-form">
-      <h3>Book an appointment</h3>
-      <input type="text" id="name" placeholder="Name" class="textbox" required />
-      <input type="email" id="email" placeholder="Email" class="email" required/>
-      <input type="text" id="phone" placeholder="Phone Number" class="phoneno" required />
-      <select name="category" id="category" class="input-field"required>
-        <option value="Choose your service">Choose your service </option>
-        <option value="Haircut">Haircut $25</option>
-      </select>
-      <input type="date" id="date" name="date" class="date" placeholder="Choose a date"  onchange="updateTimeSlots()" required />
-      <select id="time" name="time" class="time" required></select>
-      <button type="button" class="confirm" onclick="sendMail(), openPopup()">Confirm appointment</button>
-
-
-      <div class="popup" id="popup">
-
-        <h2>Thank you!
-        </h2>
-        <p>Your appointment is booked!</p>
-        <button class="thanksBtn" onclick="closePopup()">OK</button>
-    </div>
-
-
-
-    </form>
+    <!-- Cal inline embed code begins -->
+    <div id="my-cal-inline"></div>
+    <script type="text/javascript">
+      (function (C, A, L) { 
+        let p = function (a, ar) { a.q.push(ar); }; 
+        let d = C.document; 
+        C.Cal = C.Cal || function () { 
+          let cal = C.Cal; 
+          let ar = arguments; 
+          if (!cal.loaded) { 
+            cal.ns = {}; 
+            cal.q = cal.q || []; 
+            d.head.appendChild(d.createElement("script")).src = A; 
+            cal.loaded = true; 
+          } 
+          if (ar[0] === L) { 
+            const api = function () { p(api, arguments); }; 
+            const namespace = ar[1]; 
+            api.q = api.q || []; 
+            if (typeof namespace === "string") {
+              cal.ns[namespace] = cal.ns[namespace] || api;
+              p(cal.ns[namespace], ar);
+              p(cal, ["initNamespace", namespace]);
+            } else {
+              p(cal, ar);
+            } 
+            return;
+          } 
+          p(cal, ar); 
+        }; 
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+  
+      Cal("init", { origin: "https://cal.com" });
+      Cal("inline", {
+        elementOrSelector: "#my-cal-inline",
+        calLink: "zaidhanif1/haircut",
+        layout: "month_view"
+      });
+  
+      Cal("ui", {
+        "theme": "light",
+        "styles": { "branding": { "brandColor": "#ffffff" } },
+        "hideEventTypeDetails": false,
+        "layout": "month_view"
+      });
+    </script>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="/index.js"></script>
   <footer>
     <div class="socialIcons">
-        <a href="https://www.instagram.com/zc.utz/" target="_blank"><i class="fa-brands fa-instagram" onclick="link"></i></a>
-        <a href="https://www.tiktok.com/@zc.utz?_t=8n2NBmi1hEM&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/zc.utz/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@zc.utz?_t=8n2NBmi1hEM&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
     </div>
     <div class="footerNav"></div>
     <div class="footerBottom">
@@ -67,11 +85,9 @@
         <br>
         <br>
         zc.utzzzz1@gmail.com
-        <a href="zc.utzzzz1@gmail.com"></a>    
-        
-        
-        </p>
+        <a href="mailto:zc.utzzzz1@gmail.com"></a>
+      </p>
     </div>
-</footer>
+  </footer>
 </body>
 </html>
