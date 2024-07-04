@@ -291,6 +291,7 @@ footer
     color: white; /* Change the property to color instead of background-color */
 }
 
+
 /*end foot design*/
 
 @media (max-width: 600px) {
@@ -429,6 +430,10 @@ footer
   {
     visibility: visible;
     transform: translate(-50%, -50%) scale(1);
+  }
+  .cal-iframe
+  {
+    width: 1000px;
   }
 
 
